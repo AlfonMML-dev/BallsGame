@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">BallsGame</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- FirstFragment -->
+    <string name="rbtFacil_First">Facil</string>
+    <string name="rbtMedio_First">Medio</string>
+    <string name="rbtDificil_First">Dificil</string>
+    <string name="tvNivel_First">Nivel</string>
+    <string name="btJugar_First">Jugar</string>
+
+    <!-- SecondFragment -->
+    <string name="tV_Ready">Ready for the Glory?</string>
+
+    <!--  GameFragment  -->
+    <string name="tV_Counter">0</string>
+
+    <!--  GuessBallsFragment  -->
+    <string name="tV_Inserte">Inserte el número de bolas vistas de cada color</string>
+    <string name="tV_Rojo">Rojo</string>
+    <string name="tV_Amarillo">Amarillo</string>
+    <string name="tV_Azul">Azul</string>
+    <string name="tV_Verde">Verde</string>
+    <string name="tV_Intentos">Intentos</string>
+    <string name="tV_NumIntentos">3</string>
+    <string name="bt_Comprobar">Comprobar</string>
+    <string name="hint_eT">Debe ser un número</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

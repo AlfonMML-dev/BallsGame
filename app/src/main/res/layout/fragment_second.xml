@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SecondFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HTop_Second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HBottom_Second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VStart_Second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VEnd_Second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/tV_Ready"
+        style="@style/tV_Ready_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tV_Ready"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Second"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Second"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_HTop_Second" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

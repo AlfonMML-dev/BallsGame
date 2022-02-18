@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tV_Ready_Style" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Widget.Theme.JuegoBolita.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

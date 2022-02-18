@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.GuessBallsFragment"
+    android:id="@+id/frameLayout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HTop_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HMiddle_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HBottom_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VStart_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VMiddle_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VEnd_Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/tV_Inserte"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/tV_Inserte"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_HMiddle_Guess"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_HTop_Guess" />
+
+    <TextView
+        android:id="@+id/tV_Rojo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/red_Guess"
+        android:text="@string/tV_Rojo"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Inserte" />
+
+    <EditText
+        android:id="@+id/eT_Rojo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hint_eT"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black_hint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Rojo"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/tV_Azul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/blue_Guess"
+        android:text="@string/tV_Azul"
+        android:textAlignment="center"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/eT_Rojo" />
+
+    <EditText
+        android:id="@+id/eT_Azul"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hint_eT"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black_hint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Azul" />
+
+    <TextView
+        android:id="@+id/tV_Amarillo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/yellow_Guess"
+        android:text="@string/tV_Amarillo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Inserte" />
+
+    <EditText
+        android:id="@+id/eT_Amarillo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hint_eT"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black_hint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Amarillo" />
+
+    <TextView
+        android:id="@+id/tV_Verde"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/green_Guess"
+        android:text="@string/tV_Verde"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/eT_Amarillo" />
+
+    <EditText
+        android:id="@+id/eT_Verde"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hint_eT"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="@color/black_hint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VMiddle_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tV_Verde" />
+
+    <TextView
+        android:id="@+id/tv_Intentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tV_Intentos"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tV_NumIntentos"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/eT_Azul" />
+
+    <TextView
+        android:id="@+id/tV_NumIntentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tV_NumIntentos"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Comprobar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intentos" />
+
+    <Button
+        android:id="@+id/bt_Comprobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_Comprobar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_HBottom_Guess"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_Guess"
+        app:layout_constraintStart_toEndOf="@id/guideline_VStart_Guess"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Intentos" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FirstFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HTop_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_HBottom_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VStart_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_VEnd_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/tvNivel_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvNivel_First"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_First"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_First"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_HTop_First" />
+
+    <RadioGroup
+        android:id="@+id/rgLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btJugar_First"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_First"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_First"
+        app:layout_constraintTop_toBottomOf="@+id/tvNivel_First">
+
+        <RadioButton
+            android:id="@+id/rbtFacil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtFacil_First"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbtMedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtMedio_First"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbtDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rbtDificil_First"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btJugar_First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="116dp"
+        android:text="@string/btJugar_First"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_HBottom_First"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_VEnd_First"
+        app:layout_constraintStart_toEndOf="@+id/guideline_VStart_First" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
