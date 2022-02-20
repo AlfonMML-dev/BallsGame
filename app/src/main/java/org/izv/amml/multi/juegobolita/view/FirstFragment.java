@@ -1,5 +1,6 @@
 package org.izv.amml.multi.juegobolita.view;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,6 +62,7 @@ public class FirstFragment extends Fragment {
                 }
                 Bundle bundle = new Bundle();
                 bundle.putInt("Nivel", dificultad);
+                MainActivity.music.playSoundPool(getContext(), R.raw.ui_quirky_levelselected);
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
             }

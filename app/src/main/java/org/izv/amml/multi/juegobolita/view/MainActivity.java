@@ -1,13 +1,10 @@
 package org.izv.amml.multi.juegobolita.view;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -16,6 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import org.izv.amml.multi.juegobolita.R;
 import org.izv.amml.multi.juegobolita.databinding.ActivityMainBinding;
+import org.izv.amml.multi.juegobolita.model.Music;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static ActionBar supportActionBar;
 
+    //Add music
+    public static Music music = new Music();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //Add sounds
+        music.createSoundPool(this);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -70,4 +72,12 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        music.stopMediaPlayer();
+        music.stopSoundPool();
+    }
+
 }

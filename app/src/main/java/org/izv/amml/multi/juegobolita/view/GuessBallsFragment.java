@@ -2,6 +2,7 @@ package org.izv.amml.multi.juegobolita.view;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -63,6 +64,7 @@ public class GuessBallsFragment extends Fragment {
                     int numIntentos = Integer.parseInt(binding.tVNumIntentos.getText().toString());
                     if(numIntentos > 1){
                         binding.tVNumIntentos.setText(String.valueOf(--numIntentos));
+                        MainActivity.music.playSoundPool(getContext(), R.raw.ui_quirky_error);
                     } else{
                         NavHostFragment.findNavController(GuessBallsFragment.this)
                                 .navigate(R.id.action_guessBallsFragment_to_FirstFragment);
@@ -71,6 +73,7 @@ public class GuessBallsFragment extends Fragment {
                     Toast toast = Toast.makeText(context, "Has acertado", Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
+                    MainActivity.music.playSoundPool(getContext(), R.raw.ta_da_victory);
                     NavHostFragment.findNavController(GuessBallsFragment.this)
                             .navigate(R.id.action_guessBallsFragment_to_FirstFragment);
                 }

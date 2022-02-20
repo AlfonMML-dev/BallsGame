@@ -45,27 +45,25 @@ public class GameFragment extends Fragment {
         Bundle bundle = getArguments();
         int nivel = bundle.getInt("Nivel");
         Log.v("GF", "onViewCreated, nivel = " + nivel);
-        int totalSeconds = 0;
+        int totalSeconds = (int) (Math.random() * (15)) + 1;
         switch (nivel){
             case 1:
                 GraphicView.numColors = 2;
                 GraphicView.numBalls = 6;
-                totalSeconds = (int) (Math.random() * (10-5+1)) + 5;
+                totalSeconds = totalSeconds < 5 || totalSeconds > 10 ? 5 : totalSeconds;
                 break;
             case 2:
                 GraphicView.numColors = 3;
                 GraphicView.numBalls = 12;
-                totalSeconds = (int) (Math.random() * (15-10+1)) + 1;
+                totalSeconds = totalSeconds < 10 ? 10 : totalSeconds;
                 break;
             case 3:
                 GraphicView.numColors = 4;
                 GraphicView.numBalls = 18;
-                totalSeconds = (int) (Math.random() * (20-15+1)) + 1;
+                totalSeconds = totalSeconds < 10 ? 10 : totalSeconds;
                 break;
         }
         GraphicView.createBalls();
-
-//        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.elbhico);
 
         Log.v("GF", "onViewCreated, totalSeconds = " + totalSeconds);
         totalSeconds = totalSeconds*1000;
@@ -73,16 +71,15 @@ public class GameFragment extends Fragment {
             public void onTick(long millisUntilFinished) {
                 //TextView del fragmento
                 binding.tvCounter.setText(String.valueOf(millisUntilFinished / 1000));
-//                mp.start();
             }
 
             public void onFinish() {
                 ArrayList<Ball> balls = GraphicView.balls;
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("balls", balls);
+                MainActivity.music.stopMediaPlayer();
                 NavHostFragment.findNavController(GameFragment.this)
                         .navigate(R.id.action_gameFragment_to_guessBallsFragment,bundle);
-//                mp.stop();
             }
         }.start();
     }
